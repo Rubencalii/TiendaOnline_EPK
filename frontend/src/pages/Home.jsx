@@ -31,6 +31,7 @@ import {
   Lightbulb as LightIcon
 } from '@mui/icons-material'
 import { useCart } from '../context/CartContext'
+import productService from '../services/productService'
 
 const Home = () => {
   const theme = useTheme()
@@ -82,10 +83,9 @@ const Home = () => {
   useEffect(() => {
     const fetchFeaturedProducts = async () => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:5000/api'}/products?featured=true&limit=6`)
-        if (response.ok) {
-          const data = await response.json()
-          setFeaturedProducts(data.products || [])
+        const result = await productService.getFeaturedProducts(6)
+        if (result.success) {
+          setFeaturedProducts(result.data)
         }
       } catch (error) {
         console.error('Error cargando productos:', error)

@@ -28,7 +28,7 @@ import NotFound from './pages/NotFound'
 // Páginas de administración
 import AdminLayout from './pages/admin/AdminLayout'
 import Dashboard from './pages/admin/Dashboard'
-import ProductsAdmin from './pages/admin/ProductsAdmin'
+import ProductsAdminWithMockData from './pages/admin/ProductsAdminWithMockData'
 import OrdersAdmin from './pages/admin/OrdersAdmin'
 import UsersAdmin from './pages/admin/UsersAdmin'
 
@@ -155,7 +155,7 @@ function App() {
                 {/* Panel de Administración */}
                 <Route path="/admin" element={<AdminLayout />}>
                   <Route index element={<Dashboard />} />
-                  <Route path="productos" element={<ProductsAdmin />} />
+                  <Route path="productos" element={<ProductsAdminWithMockData />} />
                   <Route path="pedidos" element={<OrdersAdmin />} />
                   <Route path="usuarios" element={<UsersAdmin />} />
                 </Route>
