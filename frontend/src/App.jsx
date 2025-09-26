@@ -25,6 +25,13 @@ import Contact from './pages/Contact'
 import About from './pages/About'
 import NotFound from './pages/NotFound'
 
+// Páginas de administración
+import AdminLayout from './pages/admin/AdminLayout'
+import Dashboard from './pages/admin/Dashboard'
+import ProductsAdmin from './pages/admin/ProductsAdmin'
+import OrdersAdmin from './pages/admin/OrdersAdmin'
+import UsersAdmin from './pages/admin/UsersAdmin'
+
 // Contextos
 import { AuthProvider } from './context/AuthContext'
 import { CartProvider } from './context/CartContext'
@@ -144,6 +151,14 @@ function App() {
                     <About />
                   </Layout>
                 } />
+                
+                {/* Panel de Administración */}
+                <Route path="/admin" element={<AdminLayout />}>
+                  <Route index element={<Dashboard />} />
+                  <Route path="productos" element={<ProductsAdmin />} />
+                  <Route path="pedidos" element={<OrdersAdmin />} />
+                  <Route path="usuarios" element={<UsersAdmin />} />
+                </Route>
                 
                 {/* Página 404 */}
                 <Route path="*" element={
