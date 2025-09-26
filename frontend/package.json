@@ -1,0 +1,46 @@
+{
+  "name": "epk-musica-frontend",
+  "version": "1.0.0",
+  "description": "Frontend para la tienda online Epk Música - Instrumentos musicales, sonido e iluminación",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "start": "vite"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.0",
+    "axios": "^1.3.0",
+    "styled-components": "^5.3.9",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/material": "^5.11.10",
+    "@mui/icons-material": "^5.11.9",
+    "@mui/lab": "^5.0.0-alpha.120",
+    "framer-motion": "^10.0.0",
+    "swiper": "^9.1.0",
+    "react-hook-form": "^7.43.0",
+    "react-query": "^3.39.3",
+    "zustand": "^4.3.6",
+    "react-hot-toast": "^2.4.0",
+    "lucide-react": "^0.323.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^3.1.0",
+    "vite": "^4.1.0",
+    "eslint": "^8.35.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.3.4"
+  },
+  "keywords": ["music", "instruments", "sound", "lighting", "ecommerce", "epk", "orquesta", "epoca", "react"],
+  "author": "Epk Música",
+  "license": "MIT"
+}
